@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fsF-Cz-XcX">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iFab2020_MuseumApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoUPV" translatesAutoresizingMaskIntoConstraints="NO" id="NfL-4v-BWV" userLabel="Image UPV">
+                                <rect key="frame" x="20" y="108" width="335" height="314"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="314" id="bxy-I7-bPy"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoiFabLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Ldx-uW-oiS" userLabel="Image iFab">
+                                <rect key="frame" x="20" y="422" width="335" height="336"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orlando Landaeta" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jE4-7g-n5D">
+                                <rect key="frame" x="20" y="737" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGR-pR-7wM">
+                                <rect key="frame" x="149.66666666666666" y="388" width="76" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="ENTRAR"/>
+                                <connections>
+                                    <segue destination="cur-fT-2Pk" kind="show" id="DL4-ce-BL1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jE4-7g-n5D" secondAttribute="bottom" constant="20" id="0Is-Yy-JpL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NfL-4v-BWV" secondAttribute="trailing" constant="20" id="8qY-2a-9or"/>
+                            <constraint firstItem="NfL-4v-BWV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="EBV-iD-waO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ldx-uW-oiS" secondAttribute="bottom" constant="20" id="JHO-l4-Ei2"/>
+                            <constraint firstItem="uGR-pR-7wM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LH0-Eq-GRt"/>
+                            <constraint firstItem="Ldx-uW-oiS" firstAttribute="top" secondItem="NfL-4v-BWV" secondAttribute="bottom" id="NQ5-mS-3lo"/>
+                            <constraint firstItem="uGR-pR-7wM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PEO-5z-LAy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jE4-7g-n5D" secondAttribute="trailing" constant="20" id="Qiv-DI-9ps"/>
+                            <constraint firstItem="NfL-4v-BWV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="bQ4-wG-AQe"/>
+                            <constraint firstItem="Ldx-uW-oiS" firstAttribute="trailing" secondItem="NfL-4v-BWV" secondAttribute="trailing" id="j9d-HR-1Wu"/>
+                            <constraint firstItem="Ldx-uW-oiS" firstAttribute="leading" secondItem="NfL-4v-BWV" secondAttribute="leading" id="o4Q-nc-CBG"/>
+                            <constraint firstItem="jE4-7g-n5D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xSA-3r-TZa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RdW-8Y-iuA"/>
+                    <connections>
+                        <outlet property="btnLeerQRCodes" destination="uGR-pR-7wM" id="25N-Vx-B1x"/>
+                        <outlet property="imgLogoUPV" destination="NfL-4v-BWV" id="5l0-ZE-Axe"/>
+                        <outlet property="imgLogoiFab" destination="Ldx-uW-oiS" id="TYm-5Q-DuV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908" y="119.70443349753695"/>
+        </scene>
+        <!--MuseumApp-->
+        <scene sceneID="LQN-a1-2Df">
+            <objects>
+                <viewController id="cur-fT-2Pk" customClass="ReadQRViewController" customModule="iFab2020_MuseumApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nX5-B3-zNZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jMo-kn-uDJ">
+                                <rect key="frame" x="62.666666666666657" y="281" width="249.99999999999997" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="1AM-tH-FEJ"/>
+                                    <constraint firstAttribute="height" constant="250" id="Wio-EL-SG0"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jMo-kn-uDJ" firstAttribute="centerY" secondItem="nX5-B3-zNZ" secondAttribute="centerY" id="9jt-Nb-PXI"/>
+                            <constraint firstItem="jMo-kn-uDJ" firstAttribute="centerX" secondItem="nX5-B3-zNZ" secondAttribute="centerX" id="rQ0-82-oqQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="98R-xF-Ax3"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="MuseumApp" id="N5Z-ID-uQH"/>
+                    <connections>
+                        <outlet property="imgReadQRCode" destination="jMo-kn-uDJ" id="LQC-5k-uMV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="llB-9a-3w9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1646" y="120"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eRN-9W-MGR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fsF-Cz-XcX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TmI-5J-N02">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="srZ-Po-vEB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gXy-b8-132" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.40000000000001" y="120.08995502248877"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="LogoUPV" width="613" height="206"/>
+        <image name="LogoiFabLogo" width="1437" height="440"/>
+    </resources>
+</document>

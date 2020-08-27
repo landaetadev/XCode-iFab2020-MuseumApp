@@ -19,17 +19,19 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        funcBtnEntrarBorderDesign()
         funcAnimacion()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        //Thread.sleep(forTimeInterval: 0)
-        //self.btnLeerQRCodes.isHidden = false
+        Thread.sleep(forTimeInterval: 1)
+        self.btnLeerQRCodes.isHidden = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //btnLeerQRCodes.isHidden = true
+        btnLeerQRCodes.isHidden = true
+        
     }
     
     func funcAnimacion (){
@@ -37,6 +39,15 @@ class ViewController: UIViewController {
             self.imgLogoUPV.center.y += self.view.bounds.width
             self.imgLogoiFab.center.y -= self.view.bounds.width
         }
+    }
+    
+    func funcBtnEntrarBorderDesign ()
+    {
+        btnLeerQRCodes.layer.backgroundColor = #colorLiteral(red: 0.8862745098, green: 0.8862745098, blue: 0.8862745098, alpha: 1)
+        btnLeerQRCodes.layer.borderColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
+        btnLeerQRCodes.layer.borderWidth = 3
+        btnLeerQRCodes.layer.cornerRadius = 10
+
     }
     
 }

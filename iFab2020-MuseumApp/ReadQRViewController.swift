@@ -18,6 +18,9 @@ class ReadQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Cuadro en la pantalla
+        funcSquareCamBorderDesign()
 
         //Creando Sesion
         let session = AVCaptureSession()
@@ -68,6 +71,14 @@ class ReadQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
                 
             }
         }
+    }
+    
+    func funcSquareCamBorderDesign ()
+    {
+        imgReadQRCode.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        imgReadQRCode.layer.borderWidth = 10
+        imgReadQRCode.layer.cornerRadius = 20
+
     }
 
  

@@ -16,44 +16,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoUPV" translatesAutoresizingMaskIntoConstraints="NO" id="NfL-4v-BWV" userLabel="Image UPV">
-                                <rect key="frame" x="20" y="108" width="335" height="314"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="314" id="bxy-I7-bPy"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="108" width="335" height="275"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoiFabLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Ldx-uW-oiS" userLabel="Image iFab">
-                                <rect key="frame" x="20" y="422" width="335" height="336"/>
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orlando Landaeta" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jE4-7g-n5D">
-                                <rect key="frame" x="20" y="737" width="335" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGR-pR-7wM">
-                                <rect key="frame" x="149.66666666666666" y="388" width="76" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="ENTRAR"/>
+                                <rect key="frame" x="143.66666666666666" y="388" width="95" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="hHu-w1-wyG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                                <state key="normal" title=" ACEPTAR ">
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="cur-fT-2Pk" kind="show" id="DL4-ce-BL1"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orlando Landaeta" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2E0-wU-KbD">
+                                <rect key="frame" x="20" y="753.66666666666663" width="335" height="14.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoiFabLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Ldx-uW-oiS" userLabel="Image iFab">
+                                <rect key="frame" x="20" y="437" width="335" height="321"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jE4-7g-n5D" secondAttribute="bottom" constant="20" id="0Is-Yy-JpL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NfL-4v-BWV" secondAttribute="trailing" constant="20" id="8qY-2a-9or"/>
-                            <constraint firstItem="NfL-4v-BWV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="EBV-iD-waO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ldx-uW-oiS" secondAttribute="bottom" constant="20" id="JHO-l4-Ei2"/>
-                            <constraint firstItem="uGR-pR-7wM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LH0-Eq-GRt"/>
-                            <constraint firstItem="Ldx-uW-oiS" firstAttribute="top" secondItem="NfL-4v-BWV" secondAttribute="bottom" id="NQ5-mS-3lo"/>
-                            <constraint firstItem="uGR-pR-7wM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PEO-5z-LAy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jE4-7g-n5D" secondAttribute="trailing" constant="20" id="Qiv-DI-9ps"/>
-                            <constraint firstItem="NfL-4v-BWV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="bQ4-wG-AQe"/>
-                            <constraint firstItem="Ldx-uW-oiS" firstAttribute="trailing" secondItem="NfL-4v-BWV" secondAttribute="trailing" id="j9d-HR-1Wu"/>
-                            <constraint firstItem="Ldx-uW-oiS" firstAttribute="leading" secondItem="NfL-4v-BWV" secondAttribute="leading" id="o4Q-nc-CBG"/>
-                            <constraint firstItem="jE4-7g-n5D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xSA-3r-TZa"/>
+                            <constraint firstItem="uGR-pR-7wM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="388" id="2UB-mq-tpb"/>
+                            <constraint firstItem="NfL-4v-BWV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="7SR-Wx-oQ0"/>
+                            <constraint firstItem="2E0-wU-KbD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ARW-iC-N89"/>
+                            <constraint firstItem="uGR-pR-7wM" firstAttribute="top" secondItem="NfL-4v-BWV" secondAttribute="bottom" constant="5" id="B1T-IX-KRG"/>
+                            <constraint firstItem="uGR-pR-7wM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="143.66666666666666" id="Ik6-c1-1io"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ldx-uW-oiS" secondAttribute="bottom" constant="20" id="S45-MW-qak"/>
+                            <constraint firstItem="Ldx-uW-oiS" firstAttribute="top" secondItem="uGR-pR-7wM" secondAttribute="bottom" constant="5" id="SvC-kN-brh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ldx-uW-oiS" secondAttribute="trailing" constant="20" id="VOc-4m-UXX"/>
+                            <constraint firstItem="Ldx-uW-oiS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZVt-pY-k7x"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2E0-wU-KbD" secondAttribute="trailing" constant="20" id="ZqU-g1-PHu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uGR-pR-7wM" secondAttribute="trailing" constant="136.33333333333334" id="dGv-zX-U56"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2E0-wU-KbD" secondAttribute="bottom" constant="10" id="hIn-TZ-UVf"/>
+                            <constraint firstItem="NfL-4v-BWV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="lR2-66-SZE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ldx-uW-oiS" secondAttribute="trailing" constant="20" id="mQA-lP-CcS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NfL-4v-BWV" secondAttribute="trailing" constant="20" id="pse-PS-Yan"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -108,6 +113,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TmI-5J-N02">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.8862745098" green="0.8862745098" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

@@ -18,38 +18,58 @@ class ReadQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Color de fuente en la barra superior
+        //navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+        
         
         //Cuadro en la pantalla
         funcSquareCamBorderDesign()
 
         //Creando Sesion
-        let session = AVCaptureSession()
+        let letSession = AVCaptureSession()
         //Define capture device
         //position: .back => camara trasera
         //position: .front => camara frontal
-        let letCaptureDevice = AVCaptureDevice.default(.builtInWideAngleCamera, for: AVMediaType.video, position: .back)!
+        guard
+            let letCaptureDevice = AVCaptureDevice.default(.builtInWideAngleCamera, for: AVMediaType.video, position: .back)
+            else {
+                //EN CASO DE QUE NO SE DETECTE CAMARA EN EL DIPOSITIVO
+                print("ERROR - Your device is not aplicable for video precessing")
+                let letAlerta = UIAlertController(title: "ERROR", message: "No se detecta camara en el dispositivo", preferredStyle: .alert)
+                //Boton en el mensaje
+                let letContinue = UIAlertAction(title: "OK", style: .default, handler: nil)
+                letAlerta.addAction(letContinue)
+                //Activar el mensaje
+                self.present(letAlerta, animated: true, completion: nil)
+                
+                return
+        }
+        
+
+        
         
         do{
             let letInput = try AVCaptureDeviceInput(device: letCaptureDevice)
-            session.addInput(letInput)
+            letSession.addInput(letInput)
         }catch{
-            print ("ERROR - DEVICE NO DEFINED")
+            print ("ERROR - Your device can not give video")
         }
         
         let letOutput = AVCaptureMetadataOutput()
-        session.addOutput(letOutput)
+        letSession.addOutput(letOutput)
         
         letOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
         letOutput.metadataObjectTypes = [AVMetadataObject.ObjectType.qr]
         
-        varVideo = AVCaptureVideoPreviewLayer(session: session)
+        varVideo = AVCaptureVideoPreviewLayer(session: letSession)
         varVideo.frame = view.layer.bounds
+        varVideo.videoGravity = .resize
         view.layer.addSublayer(varVideo)
         
         //Presentar ImageView para leer el codigo
         self.view.bringSubviewToFront(imgReadQRCode)
         
-        session.startRunning()
+        letSession.startRunning()
     }
     
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {

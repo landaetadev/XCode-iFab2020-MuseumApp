@@ -65,11 +65,11 @@
 				55F7759924F2FED400B48C4D /* SceneDelegate.swift */,
 				55F7759B24F2FED400B48C4D /* ViewController.swift */,
 				55F7759D24F2FED400B48C4D /* Main.storyboard */,
+				55BBCBA024F700A80050D266 /* ReadQRViewController.swift */,
 				55F775A324F2FED600B48C4D /* Assets.xcassets */,
 				55F775A524F2FED600B48C4D /* LaunchScreen.storyboard */,
 				55F775A824F2FED600B48C4D /* Info.plist */,
 				55F775A024F2FED400B48C4D /* iFab2020_MuseumApp.xcdatamodeld */,
-				55BBCBA024F700A80050D266 /* ReadQRViewController.swift */,
 			);
 			path = "iFab2020-MuseumApp";
 			sourceTree = "<group>";

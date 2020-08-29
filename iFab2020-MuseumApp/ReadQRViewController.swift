@@ -35,18 +35,17 @@ class ReadQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
             else {
                 //EN CASO DE QUE NO SE DETECTE CAMARA EN EL DIPOSITIVO
                 print("ERROR - Your device is not aplicable for video precessing")
-                let letAlerta = UIAlertController(title: "ERROR", message: "No se detecta camara en el dispositivo", preferredStyle: .alert)
+                let letAlertaCam = UIAlertController(title: "ERROR", message: "No se detecta camara en el dispositivo", preferredStyle: .alert)
                 //Boton en el mensaje
-                let letContinue = UIAlertAction(title: "OK", style: .default, handler: nil)
-                letAlerta.addAction(letContinue)
+                //letAlertaCam.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                letAlertaCam.addAction(UIAlertAction(title: "OK", style: .default, handler: { (nil) in
+                    //Al no detectar camara regresa a la pantalla anterior
+                    self.funcBackPortada()
+                }))
                 //Activar el mensaje
-                self.present(letAlerta, animated: true, completion: nil)
-                
+                self.present(letAlertaCam, animated: true, completion: nil)
                 return
         }
-        
-
-        
         
         do{
             let letInput = try AVCaptureDeviceInput(device: letCaptureDevice)
@@ -80,13 +79,12 @@ class ReadQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
             {
                 if letObject.type == AVMetadataObject.ObjectType.qr
                 {
-                    let msgAlert = UIAlertController(title: "QR Code", message: letObject.stringValue, preferredStyle: .alert)
-                    msgAlert.addAction(UIAlertAction(title: "Retake", style: .default, handler: nil))
-                    msgAlert.addAction(UIAlertAction(title: "Copy", style: .default, handler: { (nil) in
+                    let letMsgAlert = UIAlertController(title: "QR Code", message: letObject.stringValue, preferredStyle: .alert)
+                    letMsgAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (nil) in
                         UIPasteboard.general.string = letObject.stringValue
+                        self.funcBackPortada()
                     }))
-                    
-                    present(msgAlert, animated: true, completion: nil)
+                    present(letMsgAlert, animated: true, completion: nil)
                 }
                 
             }
@@ -99,6 +97,10 @@ class ReadQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         imgReadQRCode.layer.borderWidth = 10
         imgReadQRCode.layer.cornerRadius = 20
 
+    }
+    
+    func funcBackPortada(){ //ContenidoVC -> CameraVC
+        self.navigationController?.popViewController(animated: true)
     }
 
  

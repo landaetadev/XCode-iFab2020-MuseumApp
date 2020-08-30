@@ -19,7 +19,7 @@
 
 /* Begin PBXFileReference section */
 		55BBCBA024F700A80050D266 /* ReadQRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadQRViewController.swift; sourceTree = "<group>"; };
-		55F7759424F2FED400B48C4D /* iFab2020-MuseumApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iFab2020-MuseumApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		55F7759424F2FED400B48C4D /* MuseumApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuseumApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55F7759724F2FED400B48C4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55F7759924F2FED400B48C4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		55F7759B24F2FED400B48C4D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,7 +53,7 @@
 		55F7759524F2FED400B48C4D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				55F7759424F2FED400B48C4D /* iFab2020-MuseumApp.app */,
+				55F7759424F2FED400B48C4D /* MuseumApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,7 +98,7 @@
 			);
 			name = "iFab2020-MuseumApp";
 			productName = "iFab2020-MuseumApp";
-			productReference = 55F7759424F2FED400B48C4D /* iFab2020-MuseumApp.app */;
+			productReference = 55F7759424F2FED400B48C4D /* MuseumApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -308,7 +308,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.olandaeta.iFab2020-MuseumApp";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MuseumApp;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -326,7 +326,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.olandaeta.iFab2020-MuseumApp";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MuseumApp;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

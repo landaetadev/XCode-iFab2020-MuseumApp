@@ -21,7 +21,6 @@ class ReadQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         //Color de fuente en la barra superior
         //navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
         
-        
         //Cuadro en la pantalla
         funcSquareCamBorderDesign()
 
@@ -37,11 +36,12 @@ class ReadQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
                 print("ERROR - Your device is not aplicable for video precessing")
                 let letAlertaCam = UIAlertController(title: "ERROR", message: "No se detecta camara en el dispositivo", preferredStyle: .alert)
                 //Boton en el mensaje
-                //letAlertaCam.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                 letAlertaCam.addAction(UIAlertAction(title: "OK", style: .default, handler: { (nil) in
                     //Al no detectar camara regresa a la pantalla anterior
+                    print("LA CAMARA NO FUNCIONA")
                     self.funcBackPortada()
                 }))
+                
                 //Activar el mensaje
                 self.present(letAlertaCam, animated: true, completion: nil)
                 return
@@ -71,7 +71,8 @@ class ReadQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         letSession.startRunning()
     }
     
-    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection)
+    {
         
         if metadataObjects.count != 0
         {
@@ -79,14 +80,9 @@ class ReadQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
             {
                 if letObject.type == AVMetadataObject.ObjectType.qr
                 {
-                    let letMsgAlert = UIAlertController(title: "QR Code", message: letObject.stringValue, preferredStyle: .alert)
-                    letMsgAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (nil) in
-                        UIPasteboard.general.string = letObject.stringValue
-                        self.funcBackPortada()
-                    }))
-                    present(letMsgAlert, animated: true, completion: nil)
+                    print("LA CAMARA FUNCIONA, EL CODIGO DICE: \(letObject.stringValue!)")
+
                 }
-                
             }
         }
     }
@@ -102,7 +98,5 @@ class ReadQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     func funcBackPortada(){ //ContenidoVC -> CameraVC
         self.navigationController?.popViewController(animated: true)
     }
-
- 
 
 }

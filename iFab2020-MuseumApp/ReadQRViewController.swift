@@ -81,6 +81,11 @@ class ReadQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
                 if letObject.type == AVMetadataObject.ObjectType.qr
                 {
                     print("LA CAMARA FUNCIONA, EL CODIGO DICE: \(letObject.stringValue!)")
+                    // Pasar a la pantalla de contenido al leer QR => CameraVC -> ContenidoVC
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let mainTabBarController = storyboard.instantiateViewController(identifier: "ContenidoVC")
+                    mainTabBarController.modalPresentationStyle = .fullScreen
+                    self.present(mainTabBarController, animated: true, completion: nil)
 
                 }
             }

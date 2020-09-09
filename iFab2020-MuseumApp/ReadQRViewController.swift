@@ -21,6 +21,9 @@ class ReadQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         //Color de fuente en la barra superior
         //navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
         
+        //BackButton Hide
+        navigationItem.hidesBackButton = true
+        
         //Cuadro en la pantalla
         funcSquareCamBorderDesign()
 
@@ -86,6 +89,11 @@ class ReadQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
                     let letTabBarController = letStoryboard.instantiateViewController(identifier: "ContenidoVC")
                     letTabBarController.modalPresentationStyle = .fullScreen
                     self.present(letTabBarController, animated: true, completion: nil)
+                    print("LA CAMARA FUNCIONA, EL CODIGO DICE: \(letObject.stringValue!)")
+                    //PRUEBA LEER JSON
+                    print("TEST")
+                    let letData = JSONDataLoader().varJSONDataLoader
+                    print (letData)
                 }
             }
         }
@@ -99,7 +107,8 @@ class ReadQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
 
     }
     
-    func funcBackPortada(){ //ContenidoVC -> CameraVC
+    func funcBackPortada()
+    { //ContenidoVC -> CameraVC
         self.navigationController?.popViewController(animated: true)
     }
 

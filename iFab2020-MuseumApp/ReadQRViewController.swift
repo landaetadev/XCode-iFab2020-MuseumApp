@@ -38,6 +38,7 @@ class ReadQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
                 //EN CASO DE QUE NO SE DETECTE CAMARA EN EL DIPOSITIVO
                 print("ERROR - Your device is not aplicable for video precessing")
                 let letAlertaCam = UIAlertController(title: "ERROR", message: "No se detecta camara en el dispositivo", preferredStyle: .alert)
+                
                 //Boton en el mensaje
                 letAlertaCam.addAction(UIAlertAction(title: "OK", style: .default, handler: { (nil) in
                     //Al no detectar camara regresa a la pantalla anterior
@@ -83,17 +84,17 @@ class ReadQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
             {
                 if letObject.type == AVMetadataObject.ObjectType.qr
                 {
-                    print("LA CAMARA FUNCIONA, EL CODIGO DICE: \(letObject.stringValue!)")
                     // Pasar a la pantalla de contenido al leer QR => CameraVC -> ContenidoVC
                     let letStoryboard = UIStoryboard(name: "Main", bundle: nil)
                     let letTabBarController = letStoryboard.instantiateViewController(identifier: "ContenidoVC")
                     letTabBarController.modalPresentationStyle = .fullScreen
                     self.present(letTabBarController, animated: true, completion: nil)
                     print("LA CAMARA FUNCIONA, EL CODIGO DICE: \(letObject.stringValue!)")
-                    //PRUEBA LEER JSON
-                    print("TEST")
-                    let letData = JSONDataLoader().varJSONDataLoader
-                    print (letData)
+                    
+                    //INFORMACION JSON
+                    print("INFORMACION JSON")
+                    let letDataJSON = JSONDataLoader().varJSONDataLoader
+                    print (letDataJSON)
                 }
             }
         }
@@ -104,7 +105,6 @@ class ReadQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         imgReadQRCode.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         imgReadQRCode.layer.borderWidth = 10
         imgReadQRCode.layer.cornerRadius = 20
-
     }
     
     func funcBackPortada()

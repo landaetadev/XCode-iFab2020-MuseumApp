@@ -1,16 +1,16 @@
 [
-  {
-      "jsonID"          : 1,
-      "jsonQRCode"      : "NES",
-      "jsonWikiURL"     : "https://en.wikipedia.org/wiki/Nintendo_Entertainment_System",
-      "jsonImageFile"   : "https://i.imgur.com/YrJ7tok.png",
-      "jsonVideoFile"   : "",
-  },
-  {
-      "jsonID"          : 2,
-      "jsonQRCode"      : "SEGA",
-      "jsonWikiURL"     : "https://en.wikipedia.org/wiki/Sega_Genesis",
-      "jsonImageFile"   : "https://i.imgur.com/5s1Wqnx.png",
-      "jsonVideoFile"   : "",
-  }
+      {
+          "jsonID"          : 1,
+          "jsonQRCode"      : "NES",
+          "jsonWikiURL"     : "https://en.wikipedia.org/wiki/Nintendo_Entertainment_System",
+          "jsonImageFile"   : "https://i.imgur.com/YrJ7tok.png",
+          "jsonVideoFile"   : "",
+      },
+      {
+          "jsonID"          : 2,
+          "jsonQRCode"      : "SEGA",
+          "jsonWikiURL"     : "https://en.wikipedia.org/wiki/Sega_Genesis",
+          "jsonImageFile"   : "https://i.imgur.com/5s1Wqnx.png",
+          "jsonVideoFile"   : "",
+      }
 ]

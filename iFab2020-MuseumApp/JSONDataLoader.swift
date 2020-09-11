@@ -21,7 +21,6 @@ public class JSONDataLoader
     
     init() {
         funcLoad()
-        //funcsort()
     }
     
     func funcLoad()
@@ -40,9 +39,5 @@ public class JSONDataLoader
         }
     }
     
-//    func funcsort()
-//    {
-//        self.varJSONDataLoader = self.varJSONDataLoader.sorted(by: {$0.varJSONId < $1.varJSONId})
-//    }
     
 }

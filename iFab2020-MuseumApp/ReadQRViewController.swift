@@ -16,10 +16,13 @@ class ReadQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     
     var varVideo = AVCaptureVideoPreviewLayer()
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         //Color de fuente en la barra superior
         //navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+        //Color de background en la barra superior
+        //navigationController?.navigationBar.backgroundColor = UIColor.black
         
         //BackButton Hide
         navigationItem.hidesBackButton = true
@@ -38,12 +41,11 @@ class ReadQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
                 //EN CASO DE QUE NO SE DETECTE CAMARA EN EL DIPOSITIVO
                 print("ERROR - Your device is not aplicable for video precessing")
                 let letAlertaCam = UIAlertController(title: "ERROR", message: "No se detecta camara en el dispositivo", preferredStyle: .alert)
-                
                 //Boton en el mensaje
                 letAlertaCam.addAction(UIAlertAction(title: "OK", style: .default, handler: { (nil) in
                     //Al no detectar camara regresa a la pantalla anterior
                     print("LA CAMARA NO FUNCIONA")
-                    self.funcBackPortada()
+                    self.funcBackInicio()
                 }))
                 
                 //Activar el mensaje
@@ -75,26 +77,34 @@ class ReadQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         letSession.startRunning()
     }
     
-    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection)
+    public func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection)
     {
-        
         if metadataObjects.count != 0
         {
             if let letObject = metadataObjects[0] as? AVMetadataMachineReadableCodeObject
             {
                 if letObject.type == AVMetadataObject.ObjectType.qr
                 {
+                    //INFORMACION LOCALJSON
+                    print("INFORMACION DATOS LOCALJSON")
+                    readLocalJsonFile()
+                    
+                    //LEER DESDE READQRVC
+//                    let letJsonID =
+//                    print("ID: \(letJsonID)")
+//                    print("QRCode: \(jsonQRCode)")
+//                    print("WikiURL: \(jsonWikiURL)")
+//                    print("ImageFile: \(jsonImageFile)")
+//                    print("VideoFile: \(jsonVideoFile)")
+                    //LEER DESDE READQRVC
+                    
                     // Pasar a la pantalla de contenido al leer QR => CameraVC -> ContenidoVC
                     let letStoryboard = UIStoryboard(name: "Main", bundle: nil)
                     let letTabBarController = letStoryboard.instantiateViewController(identifier: "ContenidoVC")
                     letTabBarController.modalPresentationStyle = .fullScreen
                     self.present(letTabBarController, animated: true, completion: nil)
                     print("LA CAMARA FUNCIONA, EL CODIGO DICE: \(letObject.stringValue!)")
-                    
-                    //INFORMACION JSON
-                    print("INFORMACION JSON")
-                    let letDataJSON = JSONDataLoader().varJSONDataLoader
-                    print (letDataJSON)
+
                 }
             }
         }
@@ -102,13 +112,13 @@ class ReadQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     
     func funcSquareCamBorderDesign ()
     {
-        imgReadQRCode.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        imgReadQRCode.layer.borderColor = UIColor.lightGray.cgColor
         imgReadQRCode.layer.borderWidth = 10
         imgReadQRCode.layer.cornerRadius = 20
     }
     
-    func funcBackPortada()
-    { //ContenidoVC -> CameraVC
+    func funcBackInicio()
+    { //ContenidoVC -> InicioVC
         self.navigationController?.popViewController(animated: true)
     }
 

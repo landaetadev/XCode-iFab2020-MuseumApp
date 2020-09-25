@@ -8,50 +8,56 @@
 
 import Foundation
 
-public func readLocalJsonFile()
+
+//func readLocalJsonFile()
+func readLocalJsonFile(varCodQR:String)
+//func readLocalJsonFile(varCodQR:String) -> String
 {
 
-    guard let letPath = Bundle.main.path(forResource: "JSONLista", ofType: "json") else {return}
-    let letURL = URL(fileURLWithPath: letPath)
+    let letPath = Bundle.main.path(forResource: "JSONLista", ofType: "json")
+    let letURL = URL(fileURLWithPath: letPath!)
     
     do
     {
         let letData = try Data(contentsOf: letURL)
-        //print("data \n \(letData)")
         let letJSON = try JSONSerialization.jsonObject(with: letData, options: .mutableContainers)
-        //print("json \n \(letJSON)")
-        
-        guard let letArray = letJSON as? [Any] else {return}
-        //print("ARRAY \n \(letArray)")
-        for user in letArray
+        //guard let letArray = letJSON as? [Any] else {return}
+        for user in letJSON as! [Any]
         {
-            guard let letUserDict = user as? [String:Any]  else {return}
-            guard let jsonID = letUserDict["jsonID"] as? Int else {return}
-            print("ID: \(jsonID)")
-            guard let jsonQRCode = letUserDict["jsonQRCode"] as? String else {return}
-            print("QRCode: \(jsonQRCode)")
-            guard let jsonWikiURL = letUserDict["jsonWikiURL"] as? String else {return}
-            print("WikiURL: \(jsonWikiURL)")
-            guard let jsonImageFile = letUserDict["jsonImageFile"] as? String else {return}
-            print("ImageFile: \(jsonImageFile)")
-            guard let jsonVideoFile = letUserDict["jsonVideoFile"] as? String else {return}
-            print("VideoFile: \(jsonVideoFile)")
+            guard let letUserDict = user as? [String:Any] else {return}
+            guard let jsonID = letUserDict["jsonID"] else {return}
+            guard let jsonQRCode = letUserDict["jsonQRCode"] else {return}
+            guard let jsonWikiURL = letUserDict["jsonWikiURL"] else {return}
+            guard let jsonImageFile = letUserDict["jsonImageFile"] else {return}
+            guard let jsonVideoFile = letUserDict["jsonVideoFile"] else {return}
             
-            if jsonQRCode =  letObject.stringValue
-            {}
+            //COMPARACION DE CODIGO QR CON LISTA JSON
+            if jsonQRCode as! String == varCodQR
+            {
+                print("INFORMACION DATOS LOCALJSON")
+                print("QR RECIBIDO: \(varCodQR)")
+                print("ID: \(String(describing: jsonID)) \n" +
+                        "QRCode: \(String(describing: jsonQRCode))\n" +
+                        "WikiURL: \(String(describing: jsonWikiURL))\n" +
+                        "ImageFile: \(String(describing: jsonImageFile))\n" +
+                        "VideoFile: \(String(describing: jsonVideoFile))")
+            }else{
+                print("El código QR no fue encontrado")
+            }
             
-            
-//            if txtSearch.text!.contains(Name)
-//            {
-//                lblName.text = Name
-//                lblAge.text = String(Age)
-//                lblGender.text = Gender
-//                lblPet.text = Pets
-//            }
         }
         
     }catch{
         print(error)
     }
-    
 }
+
+//func SendDatosPantalla()
+//{
+//    let a = string(jsonID)
+//    print("INFORMACION DATOS LOCALJSON")
+//    print("QR RECIBIDO: \(varCodQR)")
+//    print("\(a)")
+//}
+
+

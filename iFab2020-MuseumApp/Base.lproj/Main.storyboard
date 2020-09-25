@@ -273,6 +273,7 @@
         <!--Item 1-->
         <scene sceneID="sDV-kP-TLG">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tun-cw-qWI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NgO-Ag-U4z" userLabel="Item 1" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item 2" id="AgQ-9p-sfy"/>
                     <toolbarItems/>
@@ -285,7 +286,6 @@
                         <segue destination="QyB-g6-UYb" kind="relationship" relationship="rootViewController" id="57c-KW-XjT"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tun-cw-qWI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-911" y="-492"/>
         </scene>
@@ -329,7 +329,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1Me-dn-WDV"/>
+        <segue reference="pZy-9p-tVP"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="LogoUPV" width="613" height="206"/>

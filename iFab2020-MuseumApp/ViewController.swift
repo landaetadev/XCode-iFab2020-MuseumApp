@@ -56,19 +56,21 @@ class ViewController: UIViewController {
     }
     
     @IBAction func btnInfoApp(_ sender: Any) {
-        let letMSGBOX = "Aplicación lectora de códigos QR, la app no solicita ni guarda ningún tipo de información personal, se requiere la autorización por parte del usuario para el uso de la cámara del dispositivo mientras la app se encuentre en ejecución. \n" +
+        //Contenido del mensaje de alerta
+        let letMsgInfo = "Aplicación lectora de códigos QR, la app no solicita ni guarda ningún tipo de información personal, se requiere la autorización por parte del usuario para el uso de la cámara del dispositivo mientras la app se encuentre en ejecución. \n" +
             "\n" +
             "Trabajo Final de Especialización en Tecnologías Interactivas. \n" +
             "Movil App diseñada por: \n" +
             "Orlando Landaeta Leal \n" +
             "\n" +
             "Copyright © 2020"
-        let letAlerta = UIAlertController(title: "UPV - iFab - MuseumApp", message: letMSGBOX, preferredStyle: .alert)
+        //Llamar a funcion de alerta
+        let letMsgAlerta = UIAlertController(title: "UPV - iFab - MuseumApp", message: letMsgInfo, preferredStyle: .alert)
         //Boton en el mensaje
-        let letContinue = UIAlertAction(title: "OK", style: .default, handler: nil)
-        letAlerta.addAction(letContinue)
+        let letBtnOK = UIAlertAction(title: "OK", style: .default, handler: nil)
+        letMsgAlerta.addAction(letBtnOK)
         //Activar el mensaje
-        self.present(letAlerta, animated: true, completion: nil)
+        self.present(letMsgAlerta, animated: true, completion: nil)
     }
     
     

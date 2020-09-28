@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fsF-Cz-XcX">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
@@ -15,30 +15,41 @@
             <objects>
                 <viewController storyboardIdentifier="MainInicio" title="MuseumApp" useStoryboardIdentifierAsRestorationIdentifier="YES" interfaceStyle="dark" id="BYZ-38-t0r" customClass="ViewController" customModule="MuseumApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoUPV" translatesAutoresizingMaskIntoConstraints="NO" id="NfL-4v-BWV" userLabel="Image UPV">
-                                <rect key="frame" x="20" y="54" width="335" height="327.66666666666669"/>
+                                <rect key="frame" x="20" y="10" width="280" height="205.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orlando Landaeta" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2E0-wU-KbD">
-                                <rect key="frame" x="20" y="753.66666666666663" width="335" height="14.333333333333371"/>
+                                <rect key="frame" x="20" y="455.5" width="280" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="LogoiFab" translatesAutoresizingMaskIntoConstraints="NO" id="Ldx-uW-oiS" userLabel="Image iFab">
-                                <rect key="frame" x="20" y="432.66666666666674" width="335" height="335.33333333333326"/>
+                                <rect key="frame" x="20" y="266.5" width="280" height="203.5"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGR-pR-7wM">
-                                <rect key="frame" x="142.66666666666666" y="389.66666666666669" width="90" height="33"/>
+                                <rect key="frame" x="115" y="223.5" width="90" height="33"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
                                 <state key="normal" title=" ACEPTAR ">
                                     <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="zvm-jO-Avg" kind="show" id="1Me-dn-WDV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jYS-zJ-59W" userLabel="Btn Info">
+                                <rect key="frame" x="275" y="20" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="d0z-gA-hFF"/>
+                                    <constraint firstAttribute="width" constant="25" id="gA0-r0-nGn"/>
+                                </constraints>
+                                <state key="normal" image="Info001-50"/>
+                                <connections>
+                                    <action selector="btnInfoApp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aaH-2v-AnZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -50,11 +61,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2E0-wU-KbD" secondAttribute="trailing" constant="20" id="3ev-ck-xa2"/>
                             <constraint firstItem="uGR-pR-7wM" firstAttribute="top" secondItem="NfL-4v-BWV" secondAttribute="bottom" constant="8" symbolic="YES" id="92t-eV-6tD"/>
                             <constraint firstItem="NfL-4v-BWV" firstAttribute="leading" secondItem="2E0-wU-KbD" secondAttribute="leading" id="IdQ-fJ-IB0"/>
+                            <constraint firstItem="jYS-zJ-59W" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="JBw-ll-ZB4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2E0-wU-KbD" secondAttribute="bottom" constant="10" id="NFM-3D-cwd"/>
                             <constraint firstItem="Ldx-uW-oiS" firstAttribute="top" secondItem="uGR-pR-7wM" secondAttribute="bottom" constant="10" id="QhE-fA-HK1"/>
                             <constraint firstItem="uGR-pR-7wM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RX9-In-3bZ"/>
                             <constraint firstItem="Ldx-uW-oiS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Rp5-Bm-4EQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ldx-uW-oiS" secondAttribute="bottom" constant="10" id="XNG-FE-v5w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jYS-zJ-59W" secondAttribute="trailing" constant="20" id="YXW-28-Mht"/>
                             <constraint firstItem="NfL-4v-BWV" firstAttribute="trailing" secondItem="2E0-wU-KbD" secondAttribute="trailing" id="fI9-MK-3tI"/>
                             <constraint firstItem="NfL-4v-BWV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="lMv-si-b7P"/>
                             <constraint firstItem="uGR-pR-7wM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zCD-rK-vzo"/>
@@ -69,18 +82,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-330" y="882"/>
+            <point key="canvasLocation" x="-330" y="881.25"/>
         </scene>
         <!--MuseumApp-->
         <scene sceneID="LQN-a1-2Df">
             <objects>
                 <viewController storyboardIdentifier="Camera2VC" title="MuseumApp" modalPresentationStyle="fullScreen" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cur-fT-2Pk" customClass="ReadQRViewController" customModule="MuseumApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nX5-B3-zNZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jMo-kn-uDJ">
-                                <rect key="frame" x="62.666666666666657" y="237" width="249.99999999999997" height="250"/>
+                                <rect key="frame" x="35" y="93" width="250" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="1AM-tH-FEJ"/>
                                     <constraint firstAttribute="height" constant="250" id="Wio-EL-SG0"/>
@@ -109,11 +122,11 @@
             <objects>
                 <viewController id="QyB-g6-UYb" customClass="ScreenWikiViewController" customModule="MuseumApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zuj-r2-6P4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="387"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43u-Lv-zRN">
-                                <rect key="frame" x="10" y="10" width="355" height="21"/>
+                                <rect key="frame" x="10" y="10" width="300" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -150,11 +163,11 @@
             <objects>
                 <viewController id="nCS-Og-9vh" customClass="ScreenImagesController" customModule="MuseumApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zp9-CN-Xbm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="387"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Po-qs-tn3">
-                                <rect key="frame" x="10" y="10" width="355" height="21"/>
+                                <rect key="frame" x="10" y="10" width="300" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -211,11 +224,11 @@
             <objects>
                 <viewController id="Q16-Mw-C6V" customClass="ScreenVideoViewController" customModule="MuseumApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ivS-zQ-cjs">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="387"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Avl-bT-vCh">
-                                <rect key="frame" x="10" y="10" width="355" height="21"/>
+                                <rect key="frame" x="10" y="10" width="300" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -276,11 +289,11 @@
         <scene sceneID="sDV-kP-TLG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NgO-Ag-U4z" userLabel="Item 1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="AgQ-9p-sfy"/>
+                    <tabBarItem key="tabBarItem" title="Wikipedia" image="WikipediaW001-25" id="AgQ-9p-sfy"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="W46-EJ-jb4">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -296,11 +309,11 @@
         <scene sceneID="5gD-lg-4rF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xZk-t3-aY2" userLabel="Item 2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="aTw-dx-qgp"/>
+                    <tabBarItem key="tabBarItem" title="Imagenes" image="Image001-25" id="aTw-dx-qgp"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="iNR-v1-1QV">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -316,11 +329,11 @@
         <scene sceneID="KIB-KT-FuE">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rWM-LP-4Sz" userLabel="Item 3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 3" id="utc-3e-W2s"/>
+                    <tabBarItem key="tabBarItem" title="Video" image="Video001-25" id="utc-3e-W2s"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="RRJ-dS-iy2">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -340,7 +353,7 @@
                     <navigationItem key="navigationItem" id="KYu-ox-GA6"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="h7l-kI-8dS">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -357,8 +370,12 @@
         <segue reference="1Me-dn-WDV"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="Image001-25" width="25" height="25"/>
+        <image name="Info001-50" width="50" height="50"/>
         <image name="LogoUPV" width="613" height="206"/>
         <image name="LogoiFab" width="1437" height="440"/>
+        <image name="Video001-25" width="25" height="25"/>
+        <image name="WikipediaW001-25" width="25" height="25"/>
         <namedColor name="BackgroundScreenColor">
             <color red="0.88599997758865356" green="0.88599997758865356" blue="0.88599997758865356" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

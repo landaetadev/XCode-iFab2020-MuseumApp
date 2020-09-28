@@ -47,6 +47,7 @@ class ReadQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
                 letAlertaCam.addAction(UIAlertAction(title: "OK", style: .default, handler: { (nil) in
                     //Al no detectar camara regresa a la pantalla anterior - Click en OK
                     self.navigationController?.popViewController(animated: true)
+                    self.dismiss(animated: true, completion: nil)
                 }))
                 //Activar el mensaje
                 self.present(letAlertaCam, animated: true, completion: nil)
@@ -87,27 +88,18 @@ class ReadQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
                 {
                     print("LA CAMARA FUNCIONA, EL CODIGO DICE: \(letObject.stringValue!)")
                     let letCodeQRDetectado = letObject.stringValue!
-                    //INFORMACION LOCALJSON
+                    //PASAR INFORMACION A LOCALJSON
                     readLocalJsonFile(varCodQR: letCodeQRDetectado)
                     
-                    
-//                    //MENSAJE CONFIRMACION QR DETETCTADO
-//                    let letAlertaCam = UIAlertController(title: "EL CODIGO QR DICE", message: "QR: \(letCodeQRDetectado)", preferredStyle: .alert)
-//                    //Boton en el mensaje
-//                    letAlertaCam.addAction(UIAlertAction(title: "OK", style: .default, handler: { (nil) in}))
-//                    //Activar el mensaje
-//                    self.present(letAlertaCam, animated: true, completion: nil)
-//                    //MENSAJE CONFIRMACION QR DETECTADO
-                    
-                    
-                    
-                    // Activar la pantalla de contenido al leer QR => CameraVC -> ContenidoVC
-                    //let letStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                    //let letTabBarController = letStoryboard.instantiateViewController(identifier: "ContenidoVC")
-                    //letTabBarController.modalPresentationStyle = .fullScreen
-                    //self.present(letTabBarController, animated: true, completion: nil)
-                    
-                    
+                    // Activar la pantalla de contenido al encontrar QR => CameraVC -> ContenidoVC
+                    if varCodQRFound == true
+                    {
+                    let letStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let letTabBarController = letStoryboard.instantiateViewController(withIdentifier: "ContenidoVC")
+                    letTabBarController.modalPresentationStyle = .fullScreen
+                    self.present(letTabBarController, animated: true, completion: nil)
+                                            
+                    } 
                     
                 }
             }

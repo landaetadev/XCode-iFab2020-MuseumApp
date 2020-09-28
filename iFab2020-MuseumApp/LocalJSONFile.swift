@@ -8,20 +8,29 @@
 
 import Foundation
 
+var varCodQRFound :Bool = false
+var varScreenPrint :Bool = false
+var varJSONID = "", varJSONQRCode = "", varJSONWikiURL = "", varJSONImageFile = "", varJSONVideoFile = ""
 
 //func readLocalJsonFile()
 func readLocalJsonFile(varCodQR:String)
 //func readLocalJsonFile(varCodQR:String) -> String
 {
+    //RESETEA BOOLEANOS PARA LA PROXIMA BUSQUEDA EN LOCALJSONFILE
+    varCodQRFound = false
+    varScreenPrint = false
+    //RESETEA BOOLEANOS PARA LA PROXIMA BUSQUEDA EN LOCALJSONFILE
 
     let letPath = Bundle.main.path(forResource: "JSONLista", ofType: "json")
     let letURL = URL(fileURLWithPath: letPath!)
     
     do
     {
+
         let letData = try Data(contentsOf: letURL)
-        let letJSON = try JSONSerialization.jsonObject(with: letData, options: .mutableContainers)
         //guard let letArray = letJSON as? [Any] else {return}
+        //for user in letArray as! [Any]
+        let letJSON = try JSONSerialization.jsonObject(with: letData, options: .mutableContainers)
         for user in letJSON as! [Any]
         {
             guard let letUserDict = user as? [String:Any] else {return}
@@ -32,18 +41,27 @@ func readLocalJsonFile(varCodQR:String)
             guard let jsonVideoFile = letUserDict["jsonVideoFile"] else {return}
             
             //COMPARACION DE CODIGO QR CON LISTA JSON
-            if jsonQRCode as! String == varCodQR
+            if varCodQR == jsonQRCode as! String && varCodQRFound == false && varScreenPrint == false
             {
-                print("INFORMACION DATOS LOCALJSON")
-                print("QR RECIBIDO: \(varCodQR)")
-                print("ID: \(String(describing: jsonID)) \n" +
-                        "QRCode: \(String(describing: jsonQRCode))\n" +
-                        "WikiURL: \(String(describing: jsonWikiURL))\n" +
-                        "ImageFile: \(String(describing: jsonImageFile))\n" +
-                        "VideoFile: \(String(describing: jsonVideoFile))")
-            }else{
-                print("El código QR no fue encontrado")
+                
+                    print("QR RECIBIDO: \(varCodQR)")
+                    varJSONID = "\(jsonID)"
+                    varJSONQRCode = "\(jsonQRCode)"
+                    varJSONWikiURL = "\(jsonWikiURL)"
+                    varJSONImageFile = "\(jsonImageFile)"
+                    varJSONVideoFile = "\(jsonVideoFile)"
+                    funcSendDataToScreen()
+
+                varCodQRFound = true
+                varScreenPrint = true
             }
+            
+        }
+        
+        if varCodQRFound == false && varScreenPrint == false
+        {
+            print("El código no fue encontrado")
+            varScreenPrint = true
             
         }
         
@@ -52,12 +70,10 @@ func readLocalJsonFile(varCodQR:String)
     }
 }
 
-//func SendDatosPantalla()
-//{
-//    let a = string(jsonID)
-//    print("INFORMACION DATOS LOCALJSON")
-//    print("QR RECIBIDO: \(varCodQR)")
-//    print("\(a)")
-//}
+func funcSendDataToScreen()
+{
+    print("INFORMACION DATOS DESDE LOCALJSONFILE")
+    print("ID: \(varJSONID) \n" + "QRCode: \(varJSONQRCode) \n" +  "WikiURL: \(varJSONWikiURL) \n" + "ImageFile: \(varJSONImageFile) \n" + "VideoFile: \(varJSONVideoFile)")
+}
 
 

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		556D0A012505C2C10098E90F /* JSONLista.json in Resources */ = {isa = PBXBuildFile; fileRef = 556D0A002505C2C10098E90F /* JSONLista.json */; };
 		55A13C18251BB3C0002C4F59 /* LocalJSONFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A13C17251BB3C0002C4F59 /* LocalJSONFile.swift */; };
-		55A13C20251DE671002C4F59 /* PantallasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A13C1F251DE671002C4F59 /* PantallasViewController.swift */; };
+		55A13C20251DE671002C4F59 /* ScreensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A13C1F251DE671002C4F59 /* ScreensViewController.swift */; };
 		55BBCBA124F700A80050D266 /* ReadQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BBCBA024F700A80050D266 /* ReadQRViewController.swift */; };
 		55F7759824F2FED400B48C4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F7759724F2FED400B48C4D /* AppDelegate.swift */; };
 		55F7759A24F2FED400B48C4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F7759924F2FED400B48C4D /* SceneDelegate.swift */; };
@@ -23,7 +23,7 @@
 /* Begin PBXFileReference section */
 		556D0A002505C2C10098E90F /* JSONLista.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JSONLista.json; sourceTree = "<group>"; };
 		55A13C17251BB3C0002C4F59 /* LocalJSONFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalJSONFile.swift; sourceTree = "<group>"; };
-		55A13C1F251DE671002C4F59 /* PantallasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantallasViewController.swift; sourceTree = "<group>"; };
+		55A13C1F251DE671002C4F59 /* ScreensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreensViewController.swift; sourceTree = "<group>"; };
 		55BBCBA024F700A80050D266 /* ReadQRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadQRViewController.swift; sourceTree = "<group>"; };
 		55F7759424F2FED400B48C4D /* MuseumApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuseumApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55F7759724F2FED400B48C4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,13 +71,13 @@
 				55F7759B24F2FED400B48C4D /* ViewController.swift */,
 				55F7759D24F2FED400B48C4D /* Main.storyboard */,
 				55BBCBA024F700A80050D266 /* ReadQRViewController.swift */,
+				55A13C1F251DE671002C4F59 /* ScreensViewController.swift */,
 				55F775A324F2FED600B48C4D /* Assets.xcassets */,
 				55F775A524F2FED600B48C4D /* LaunchScreen.storyboard */,
 				55F775A824F2FED600B48C4D /* Info.plist */,
 				55F775A024F2FED400B48C4D /* iFab2020_MuseumApp.xcdatamodeld */,
 				556D0A002505C2C10098E90F /* JSONLista.json */,
 				55A13C17251BB3C0002C4F59 /* LocalJSONFile.swift */,
-				55A13C1F251DE671002C4F59 /* PantallasViewController.swift */,
 			);
 			path = "iFab2020-MuseumApp";
 			sourceTree = "<group>";
@@ -157,7 +157,7 @@
 				55F7759C24F2FED400B48C4D /* ViewController.swift in Sources */,
 				55BBCBA124F700A80050D266 /* ReadQRViewController.swift in Sources */,
 				55A13C18251BB3C0002C4F59 /* LocalJSONFile.swift in Sources */,
-				55A13C20251DE671002C4F59 /* PantallasViewController.swift in Sources */,
+				55A13C20251DE671002C4F59 /* ScreensViewController.swift in Sources */,
 				55F775A224F2FED400B48C4D /* iFab2020_MuseumApp.xcdatamodeld in Sources */,
 				55F7759824F2FED400B48C4D /* AppDelegate.swift in Sources */,
 				55F7759A24F2FED400B48C4D /* SceneDelegate.swift in Sources */,

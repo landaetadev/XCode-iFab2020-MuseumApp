@@ -3,14 +3,14 @@
           "jsonID"          : 1,
           "jsonQRCode"      : "NES",
           "jsonWikiURL"     : "https://en.wikipedia.org/wiki/Nintendo_Entertainment_System",
-          "jsonImageFile"   : "https://i.imgur.com/YrJ7tok.png",
-          "jsonVideoFile"   : "",
+          "jsonImageFile"   : "https://orlanlea.upv.edu.es/trabajofinaliFab/images/nes-am.png",
+          "jsonVideoFile"   : "https://orlanlea.upv.edu.es/trabajofinaliFab/videos/iMacG3.mp4",
       },
       {
           "jsonID"          : 2,
           "jsonQRCode"      : "SEGA",
           "jsonWikiURL"     : "https://en.wikipedia.org/wiki/Sega_Genesis",
-          "jsonImageFile"   : "https://i.imgur.com/5s1Wqnx.png",
-          "jsonVideoFile"   : "",
+          "jsonImageFile"   : "https://orlanlea.upv.edu.es/trabajofinaliFab/images/sega.png",
+          "jsonVideoFile"   : "https://orlanlea.upv.edu.es/trabajofinaliFab/videos/iMacG3.mp4",
       }
 ]

@@ -9,20 +9,19 @@
 import UIKit
 import AVFoundation
 
-class ReadQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
-    
+class ReadQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
+{
     
     @IBOutlet weak var imgReadQRCode: UIImageView!
     
     var varVideo = AVCaptureVideoPreviewLayer()
     
+    //Creando Sesion de captura de video
+    let letSession = AVCaptureSession()
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        //Color de fuente en la barra superior
-        //navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
-        //Color de background en la barra superior
-        //navigationController?.navigationBar.backgroundColor = UIColor.black
         
         //BackButton Hide
         navigationItem.hidesBackButton = true
@@ -32,14 +31,14 @@ class ReadQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         imgReadQRCode.layer.borderWidth = 10
         imgReadQRCode.layer.cornerRadius = 20
 
-        //Creando Sesion
-        let letSession = AVCaptureSession()
+        
         //Define capture device
         //position: .back => camara trasera
         //position: .front => camara frontal
         guard
             let letCaptureDevice = AVCaptureDevice.default(.builtInWideAngleCamera, for: AVMediaType.video, position: .back)
-            else {
+            else
+        {
                 //EN CASO DE QUE NO SE DETECTE CAMARA EN EL DIPOSITIVO
             print("LA CAMARA NO HA SIDO DETECTADA")
                 let letAlertaCam = UIAlertController(title: "ERROR", message: "No se detecta camara en el dispositivo", preferredStyle: .alert)
@@ -64,6 +63,7 @@ class ReadQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         let letOutput = AVCaptureMetadataOutput()
         letSession.addOutput(letOutput)
         
+        //Activar la deteccion de codigos QR a traves de la camara
         letOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
         letOutput.metadataObjectTypes = [AVMetadataObject.ObjectType.qr]
         
@@ -88,7 +88,7 @@ class ReadQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
                 {
                     print("LA CAMARA FUNCIONA, EL CODIGO DICE: \(letObject.stringValue!)")
                     let letCodeQRDetectado = letObject.stringValue!
-                    //PASAR INFORMACION A LOCALJSON
+                    //PASAR INFORMACION LEIDA EN EL QR A LOCALJSON
                     readLocalJsonFile(varCodQR: letCodeQRDetectado)
                     
                     // Activar la pantalla de contenido al encontrar QR => CameraVC -> ContenidoVC
@@ -98,14 +98,15 @@ class ReadQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
                     let letTabBarController = letStoryboard.instantiateViewController(withIdentifier: "ContenidoVC")
                     letTabBarController.modalPresentationStyle = .fullScreen
                     self.present(letTabBarController, animated: true, completion: nil)
-                                            
+                        
+                        //DETIENE LA SESION DE LA CAMARA PARA EVITAR LEER QR'S MIENTRAS SE VISITA EL TAB BAR
+                        //LA CAMARA SE REACTIVA AL REGRESAR A LA PANTALLA MUSEUMAPP
+                        letSession.stopRunning()
                     } 
                     
                 }
             }
         }
     }
-    
-
 
 }

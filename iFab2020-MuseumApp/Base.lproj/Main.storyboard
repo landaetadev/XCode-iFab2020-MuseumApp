@@ -47,7 +47,9 @@
                                     <constraint firstAttribute="height" constant="25" id="d0z-gA-hFF"/>
                                     <constraint firstAttribute="width" constant="25" id="gA0-r0-nGn"/>
                                 </constraints>
-                                <state key="normal" image="Info001-50"/>
+                                <state key="normal" image="Info001-50">
+                                    <color key="titleShadowColor" systemColor="systemBackgroundColor"/>
+                                </state>
                                 <connections>
                                     <action selector="btnInfoApp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aaH-2v-AnZ"/>
                                 </connections>
@@ -74,6 +76,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RdW-8Y-iuA"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="btnLeerQRCodes" destination="uGR-pR-7wM" id="25N-Vx-B1x"/>
                         <outlet property="imgLogoUPV" destination="NfL-4v-BWV" id="5l0-ZE-Axe"/>
@@ -107,7 +110,13 @@
                             <constraint firstItem="jMo-kn-uDJ" firstAttribute="centerX" secondItem="nX5-B3-zNZ" secondAttribute="centerX" id="rQ0-82-oqQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="MuseumApp" id="N5Z-ID-uQH"/>
+                    <navigationItem key="navigationItem" title="MuseumApp" id="N5Z-ID-uQH">
+                        <barButtonItem key="leftBarButtonItem" title="INICIO" id="OHZ-iv-64F">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="kaR-Os-hf8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="imgReadQRCode" destination="jMo-kn-uDJ" id="LQC-5k-uMV"/>
@@ -147,11 +156,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Pantalla1" id="Slm-q8-dKV">
                         <barButtonItem key="leftBarButtonItem" id="9xm-CQ-jev">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="qNk-gt-NXJ">
-                                <rect key="frame" x="16" y="7" width="71" height="30"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qNk-gt-NXJ" userLabel="Camara">
+                                <rect key="frame" x="16" y="11" width="79.666666666666671" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Camara"/>
+                                <state key="normal" title=" Camara" image="chevron.left" catalog="system">
+                                    <color key="titleColor" systemColor="linkColor"/>
+                                </state>
                                 <connections>
                                     <segue destination="zvm-jO-Avg" kind="show" id="654-q1-7Z3"/>
                                 </connections>
@@ -191,11 +201,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Pantalla2" id="BCE-0Q-0Ag">
                         <barButtonItem key="leftBarButtonItem" id="98A-qc-n6a">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="S6O-LD-KBh">
-                                <rect key="frame" x="16" y="7" width="71" height="30"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="S6O-LD-KBh">
+                                <rect key="frame" x="16" y="11" width="79.666666666666671" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Camara"/>
+                                <state key="normal" title=" Camara" image="chevron.left" catalog="system">
+                                    <color key="titleColor" systemColor="linkColor"/>
+                                </state>
                                 <connections>
                                     <segue destination="zvm-jO-Avg" kind="show" id="pZy-9p-tVP"/>
                                 </connections>
@@ -237,22 +248,42 @@
                     <view key="view" contentMode="scaleToFill" id="ivS-zQ-cjs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2NX-ra-AqO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="CGk-cy-bdA"/>
                         <color key="backgroundColor" name="BackgroundScreenColor"/>
+                        <constraints>
+                            <constraint firstItem="CGk-cy-bdA" firstAttribute="trailing" secondItem="2NX-ra-AqO" secondAttribute="trailing" id="XNI-Hx-Yaf"/>
+                            <constraint firstItem="CGk-cy-bdA" firstAttribute="bottom" secondItem="2NX-ra-AqO" secondAttribute="bottom" id="ZJv-Vg-VLa"/>
+                            <constraint firstItem="2NX-ra-AqO" firstAttribute="leading" secondItem="CGk-cy-bdA" secondAttribute="leading" id="fgU-el-wK0"/>
+                            <constraint firstItem="2NX-ra-AqO" firstAttribute="top" secondItem="CGk-cy-bdA" secondAttribute="top" id="khu-8G-ps1"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Pantalla3" id="abx-n2-8Rb">
                         <barButtonItem key="leftBarButtonItem" id="iK2-Hj-Vgq">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="GS8-eq-8OW">
-                                <rect key="frame" x="16" y="7" width="71" height="30"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="GS8-eq-8OW">
+                                <rect key="frame" x="16" y="11" width="79.666666666666671" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Camara"/>
+                                <state key="normal" title=" Camara" image="chevron.left" catalog="system">
+                                    <color key="titleColor" systemColor="linkColor"/>
+                                </state>
                                 <connections>
                                     <segue destination="zvm-jO-Avg" kind="show" id="Cmn-ip-OzB"/>
                                 </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="webviewScreenVideoVC" destination="2NX-ra-AqO" id="Wgi-iM-yKi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DEa-YF-er4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -366,6 +397,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Cmn-ip-OzB"/>
+        <segue reference="kaR-Os-hf8"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Image001-25" width="25" height="25"/>
@@ -374,9 +406,13 @@
         <image name="LogoiFab" width="1437" height="440"/>
         <image name="Video001-25" width="25" height="25"/>
         <image name="WikipediaW001-25" width="25" height="25"/>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
         <namedColor name="BackgroundScreenColor">
             <color red="0.88599997758865356" green="0.88599997758865356" blue="0.88599997758865356" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

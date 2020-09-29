@@ -15,7 +15,6 @@
 		55F7759A24F2FED400B48C4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F7759924F2FED400B48C4D /* SceneDelegate.swift */; };
 		55F7759C24F2FED400B48C4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F7759B24F2FED400B48C4D /* ViewController.swift */; };
 		55F7759F24F2FED400B48C4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55F7759D24F2FED400B48C4D /* Main.storyboard */; };
-		55F775A224F2FED400B48C4D /* iFab2020_MuseumApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 55F775A024F2FED400B48C4D /* iFab2020_MuseumApp.xcdatamodeld */; };
 		55F775A424F2FED600B48C4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55F775A324F2FED600B48C4D /* Assets.xcassets */; };
 		55F775A724F2FED600B48C4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55F775A524F2FED600B48C4D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -30,7 +29,6 @@
 		55F7759924F2FED400B48C4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		55F7759B24F2FED400B48C4D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		55F7759E24F2FED400B48C4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		55F775A124F2FED400B48C4D /* iFab2020_MuseumApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iFab2020_MuseumApp.xcdatamodel; sourceTree = "<group>"; };
 		55F775A324F2FED600B48C4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55F775A624F2FED600B48C4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55F775A824F2FED600B48C4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,7 +73,6 @@
 				55F775A324F2FED600B48C4D /* Assets.xcassets */,
 				55F775A524F2FED600B48C4D /* LaunchScreen.storyboard */,
 				55F775A824F2FED600B48C4D /* Info.plist */,
-				55F775A024F2FED400B48C4D /* iFab2020_MuseumApp.xcdatamodeld */,
 				556D0A002505C2C10098E90F /* JSONLista.json */,
 				55A13C17251BB3C0002C4F59 /* LocalJSONFile.swift */,
 			);
@@ -158,7 +155,6 @@
 				55BBCBA124F700A80050D266 /* ReadQRViewController.swift in Sources */,
 				55A13C18251BB3C0002C4F59 /* LocalJSONFile.swift in Sources */,
 				55A13C20251DE671002C4F59 /* ScreensViewController.swift in Sources */,
-				55F775A224F2FED400B48C4D /* iFab2020_MuseumApp.xcdatamodeld in Sources */,
 				55F7759824F2FED400B48C4D /* AppDelegate.swift in Sources */,
 				55F7759A24F2FED400B48C4D /* SceneDelegate.swift in Sources */,
 			);
@@ -360,19 +356,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		55F775A024F2FED400B48C4D /* iFab2020_MuseumApp.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				55F775A124F2FED400B48C4D /* iFab2020_MuseumApp.xcdatamodel */,
-			);
-			currentVersion = 55F775A124F2FED400B48C4D /* iFab2020_MuseumApp.xcdatamodel */;
-			path = iFab2020_MuseumApp.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 55F7758C24F2FED400B48C4D /* Project object */;
 }

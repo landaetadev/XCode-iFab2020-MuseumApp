@@ -15,27 +15,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var imgLogoiFab: UIImageView!
     @IBOutlet weak var btnLeerQRCodes: UIButton!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         funcBtnEntrarBorderDesign()
         funcAnimacion()
-        //funcAppearAcceptButton()
+        navigationController?.navigationBar.isHidden = true
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        //btnLeerQRCodes.isHidden = true
-        
-    }
-    
-    func funcAnimacion (){
-        UIImageView.animate(withDuration: 2.0){
+    func funcAnimacion ()
+    {
+        UIImageView.animate(withDuration: 2.0)
+        {
             self.imgLogoUPV.center.y += self.view.bounds.width
             self.imgLogoiFab.center.y -= self.view.bounds.width
         }
@@ -50,18 +40,14 @@ class ViewController: UIViewController {
 
     }
     
-    func funcAppearAcceptButton(){
-        Thread.sleep(forTimeInterval: 2)
-        self.btnLeerQRCodes.isHidden = false
-    }
-    
     @IBAction func btnInfoApp(_ sender: Any) {
         //Contenido del mensaje de alerta
         let letMsgInfo = "Aplicación lectora de códigos QR, la app no solicita ni guarda ningún tipo de información personal, se requiere la autorización por parte del usuario para el uso de la cámara del dispositivo mientras la app se encuentre en ejecución. \n" +
             "\n" +
-            "Trabajo Final de Especialización en Tecnologías Interactivas. \n" +
+            "Trabajo Final: Especialización en Tecnologías Interactivas - 7ª edición \n" +
+            "\n" +
             "Movil App diseñada por: \n" +
-            "Orlando Landaeta Leal \n" +
+            "Orlando Landaeta \n" +
             "\n" +
             "Copyright © 2020"
         //Llamar a funcion de alerta
@@ -72,7 +58,6 @@ class ViewController: UIViewController {
         //Activar el mensaje
         self.present(letMsgAlerta, animated: true, completion: nil)
     }
-    
     
 }
 

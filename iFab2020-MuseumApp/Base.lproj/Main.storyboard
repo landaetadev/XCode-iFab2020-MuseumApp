@@ -134,9 +134,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WikipediaLogo480" translatesAutoresizingMaskIntoConstraints="NO" id="1Ad-6l-ezg">
+                                <rect key="frame" x="62.666666666666657" y="195.66666666666669" width="249.99999999999997" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Reh-As-71I"/>
+                                    <constraint firstAttribute="width" constant="250" id="Ult-Iq-dvo"/>
+                                </constraints>
+                            </imageView>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NVA-KT-Lga">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="641" id="sLB-HG-Dbc"/>
+                                </constraints>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
@@ -149,6 +159,8 @@
                             <constraint firstItem="NVA-KT-Lga" firstAttribute="centerY" secondItem="zuj-r2-6P4" secondAttribute="centerY" id="29v-B8-BMJ"/>
                             <constraint firstItem="j9U-0x-Dce" firstAttribute="bottom" secondItem="NVA-KT-Lga" secondAttribute="bottom" id="4O0-fM-hAi"/>
                             <constraint firstItem="NVA-KT-Lga" firstAttribute="top" secondItem="j9U-0x-Dce" secondAttribute="top" id="Ltf-s0-tOe"/>
+                            <constraint firstItem="1Ad-6l-ezg" firstAttribute="centerX" secondItem="zuj-r2-6P4" secondAttribute="centerX" id="RBk-qp-RbA"/>
+                            <constraint firstItem="1Ad-6l-ezg" firstAttribute="centerY" secondItem="zuj-r2-6P4" secondAttribute="centerY" id="Xgg-ua-e7l"/>
                             <constraint firstItem="NVA-KT-Lga" firstAttribute="leading" secondItem="j9U-0x-Dce" secondAttribute="leading" id="Y4D-ey-dKl"/>
                             <constraint firstItem="j9U-0x-Dce" firstAttribute="trailing" secondItem="NVA-KT-Lga" secondAttribute="trailing" id="dhw-Lo-xQP"/>
                             <constraint firstItem="NVA-KT-Lga" firstAttribute="centerX" secondItem="zuj-r2-6P4" secondAttribute="centerX" id="v6d-1N-kdX"/>
@@ -169,12 +181,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="imgWikipedia480" destination="1Ad-6l-ezg" id="cce-7i-xWk"/>
                         <outlet property="webviewScreenWikiVC" destination="NVA-KT-Lga" id="cq8-6H-56x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4AO-Wt-xai" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-911" y="-276"/>
+            <point key="canvasLocation" x="-911.20000000000005" y="-276.35467980295567"/>
         </scene>
         <!--Pantalla2-->
         <scene sceneID="RdB-Ob-FcV">
@@ -184,6 +197,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image96" translatesAutoresizingMaskIntoConstraints="NO" id="GSr-np-jD7" userLabel="Img Images96">
+                                <rect key="frame" x="62.666666666666657" y="195.66666666666669" width="249.99999999999997" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Fgl-QJ-CNI"/>
+                                    <constraint firstAttribute="height" constant="250" id="IHA-i3-vdv"/>
+                                </constraints>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yoc-Us-BtS">
                                 <rect key="frame" x="10" y="10" width="355" height="621"/>
                             </imageView>
@@ -192,11 +212,15 @@
                         <color key="backgroundColor" name="BackgroundScreenColor"/>
                         <constraints>
                             <constraint firstItem="Yoc-Us-BtS" firstAttribute="leading" secondItem="OGR-8p-GUy" secondAttribute="leading" constant="10" id="ASE-Bb-g1R"/>
+                            <constraint firstItem="GSr-np-jD7" firstAttribute="centerX" secondItem="zp9-CN-Xbm" secondAttribute="centerX" id="BDX-7U-OVO"/>
                             <constraint firstItem="Yoc-Us-BtS" firstAttribute="centerX" secondItem="zp9-CN-Xbm" secondAttribute="centerX" id="Egc-Oi-XTY"/>
                             <constraint firstItem="Yoc-Us-BtS" firstAttribute="top" secondItem="OGR-8p-GUy" secondAttribute="top" constant="10" id="GJY-74-8yf"/>
+                            <constraint firstItem="GSr-np-jD7" firstAttribute="centerX" secondItem="zp9-CN-Xbm" secondAttribute="centerX" id="Qv7-fd-WOF"/>
                             <constraint firstItem="OGR-8p-GUy" firstAttribute="bottom" secondItem="Yoc-Us-BtS" secondAttribute="bottom" constant="10" id="b9G-e0-XJ6"/>
                             <constraint firstItem="Yoc-Us-BtS" firstAttribute="centerY" secondItem="zp9-CN-Xbm" secondAttribute="centerY" id="fYn-MI-RHf"/>
+                            <constraint firstItem="GSr-np-jD7" firstAttribute="centerY" secondItem="zp9-CN-Xbm" secondAttribute="centerY" id="h9J-ds-Did"/>
                             <constraint firstItem="OGR-8p-GUy" firstAttribute="trailing" secondItem="Yoc-Us-BtS" secondAttribute="trailing" constant="10" id="iHL-wk-9fb"/>
+                            <constraint firstItem="GSr-np-jD7" firstAttribute="centerY" secondItem="zp9-CN-Xbm" secondAttribute="centerY" id="seY-UY-dOZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Pantalla2" id="BCE-0Q-0Ag">
@@ -214,6 +238,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="imgImages" destination="GSr-np-jD7" id="ih7-tz-1or"/>
                         <outlet property="imgScreenImageVC" destination="Yoc-Us-BtS" id="F7n-Mq-MBY"/>
                     </connections>
                 </viewController>
@@ -249,6 +274,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Video64" translatesAutoresizingMaskIntoConstraints="NO" id="B6n-3I-kH4" userLabel="Img Movies64">
+                                <rect key="frame" x="62.666666666666657" y="195.66666666666669" width="249.99999999999997" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="eXm-vx-1Jb"/>
+                                    <constraint firstAttribute="height" constant="250" id="mgP-B2-aHp"/>
+                                </constraints>
+                            </imageView>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2NX-ra-AqO">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -265,6 +297,8 @@
                             <constraint firstItem="CGk-cy-bdA" firstAttribute="bottom" secondItem="2NX-ra-AqO" secondAttribute="bottom" id="ZJv-Vg-VLa"/>
                             <constraint firstItem="2NX-ra-AqO" firstAttribute="leading" secondItem="CGk-cy-bdA" secondAttribute="leading" id="fgU-el-wK0"/>
                             <constraint firstItem="2NX-ra-AqO" firstAttribute="top" secondItem="CGk-cy-bdA" secondAttribute="top" id="khu-8G-ps1"/>
+                            <constraint firstItem="B6n-3I-kH4" firstAttribute="centerY" secondItem="ivS-zQ-cjs" secondAttribute="centerY" id="peI-FT-vIk"/>
+                            <constraint firstItem="B6n-3I-kH4" firstAttribute="centerX" secondItem="ivS-zQ-cjs" secondAttribute="centerX" id="rp1-ef-54c"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Pantalla3" id="abx-n2-8Rb">
@@ -282,6 +316,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="imgMovies" destination="B6n-3I-kH4" id="uvH-xs-3AU"/>
                         <outlet property="webviewScreenVideoVC" destination="2NX-ra-AqO" id="Wgi-iM-yKi"/>
                     </connections>
                 </viewController>
@@ -397,14 +432,17 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1Me-dn-WDV"/>
+        <segue reference="pZy-9p-tVP"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Image001-25" width="25" height="25"/>
+        <image name="Image96" width="96" height="96"/>
         <image name="Info001-50" width="50" height="50"/>
         <image name="LogoUPV" width="613" height="206"/>
         <image name="LogoiFab" width="1437" height="440"/>
         <image name="Video001-25" width="25" height="25"/>
+        <image name="Video64" width="64" height="64"/>
+        <image name="WikipediaLogo480" width="480" height="480"/>
         <image name="WikipediaW001-25" width="25" height="25"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <namedColor name="BackgroundScreenColor">

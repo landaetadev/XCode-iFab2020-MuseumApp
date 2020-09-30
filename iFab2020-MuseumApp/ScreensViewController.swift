@@ -20,29 +20,33 @@ class ScreensViewController: UIViewController {
  
 }
 
-func funcReadJsonData()
-{
-
-}
 
 class ScreenWikiViewController: UIViewController
 {
     
-    
-    
+    @IBOutlet weak var imgWikipedia480: UIImageView!
     @IBOutlet weak var webviewScreenWikiVC: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //print("WikiURL: \(varJSONWikiURL)")
-        funcReadJsonData()
+        imgWikipedia480.isHidden = true
         
         //Asigna Texto al titulo del ScreenView
         navigationItem.title = varJSONQRCode
-
-        let letURLWeb = URL(string: varJSONWikiURL)
-        webviewScreenWikiVC.load(URLRequest(url:letURLWeb!))
         
+        //Cargar Web Wiki
+        if varJSONWikiURL != ""
+        {
+            let letURLWeb = URL(string: varJSONWikiURL)
+            webviewScreenWikiVC.load(URLRequest(url:letURLWeb!))
+        }
+        else
+        {
+            imgWikipedia480.isHidden = false
+            webviewScreenWikiVC.isHidden = true
+        }
+
     }
  
 }
@@ -50,18 +54,29 @@ class ScreenWikiViewController: UIViewController
 class ScreenImagesController: UIViewController
 {
 
+    
+    @IBOutlet weak var imgImages: UIImageView!
+    
     @IBOutlet weak var imgScreenImageVC: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //print("ImageFile: \(varJSONImageFile)")
-        funcReadJsonData()
         
         //Asigna Texto al titulo del ScreenView
         navigationItem.title = varJSONQRCode
         
-        let letURLImage = NSData(contentsOf: NSURL(string: varJSONImageFile)! as URL)
-        imgScreenImageVC.image = UIImage(data: letURLImage! as Data)
+        //Cargar Imagen
+        if varJSONImageFile != ""
+        {
+            let letURLImage = NSData(contentsOf: NSURL(string: varJSONImageFile)! as URL)
+            imgScreenImageVC.image = UIImage(data: letURLImage! as Data)
+        }
+        else
+        {
+            imgImages.isHidden = false
+            imgScreenImageVC.isHidden = true
+        }
         
     }
  
@@ -69,20 +84,30 @@ class ScreenImagesController: UIViewController
 
 class ScreenVideoViewController: UIViewController
 {
+    
+    @IBOutlet weak var imgMovies: UIImageView!
+    
     @IBOutlet weak var webviewScreenVideoVC: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    print("VideoFile: \(varJSONVideoFile)")
-        funcReadJsonData()
+        //print("VideoFile: \(varJSONVideoFile)")
+        
         
         //Asigna Texto al titulo del ScreenView
         navigationItem.title = varJSONQRCode
         
         //Cargar Video
-        //funStartVideo()
-        let letURLWeb = URL(string: varJSONVideoFile)
-        webviewScreenVideoVC.load(URLRequest(url:letURLWeb!))
+        if varJSONWikiURL != ""
+        {
+            let letURLWeb = URL(string: varJSONVideoFile)
+            webviewScreenVideoVC.load(URLRequest(url:letURLWeb!))
+        }
+        else
+        {
+            imgMovies.isHidden = false
+            webviewScreenVideoVC.isHidden = true
+        }
         
     }
     

@@ -113,7 +113,7 @@
                     <navigationItem key="navigationItem" title="MuseumApp" id="N5Z-ID-uQH">
                         <barButtonItem key="leftBarButtonItem" title="INICIO" id="OHZ-iv-64F">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="kaR-Os-hf8"/>
+                                <action selector="btnBacKInicio:" destination="cur-fT-2Pk" id="2gn-sx-EFd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -294,6 +294,7 @@
             <objects>
                 <navigationController title="MuseumApp" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="fsF-Cz-XcX" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Wte-3o-Xmy"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="TmI-5J-N02">
                         <autoresizingMask key="autoresizingMask"/>
@@ -396,8 +397,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Cmn-ip-OzB"/>
-        <segue reference="kaR-Os-hf8"/>
+        <segue reference="1Me-dn-WDV"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Image001-25" width="25" height="25"/>

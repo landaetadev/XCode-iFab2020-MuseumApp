@@ -101,12 +101,30 @@ class ReadQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
                         
                         //DETIENE LA SESION DE LA CAMARA PARA EVITAR LEER QR'S MIENTRAS SE VISITA EL TAB BAR
                         //LA CAMARA SE REACTIVA AL REGRESAR A LA PANTALLA MUSEUMAPP
-                        letSession.stopRunning()
+                        funcStopCamara()
                     } 
                     
                 }
             }
         }
     }
+    
+
+    @IBAction func btnBacKInicio(_ sender: Any) {
+        funcStopCamara()
+        let letStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let letTabBarController = letStoryboard.instantiateViewController(withIdentifier: "MainInicio")
+        letTabBarController.modalPresentationStyle = .fullScreen
+        self.present(letTabBarController, animated: true, completion: nil)
+
+    }
+    
+    func funcStopCamara()
+    {
+        //DETIENE LA SESION DE LA CAMARA PARA EVITAR LEER QR'S MIENTRAS SE VISITA EL TAB BAR
+        //LA CAMARA SE REACTIVA AL REGRESAR A LA PANTALLA MUSEUMAPP
+        letSession.stopRunning()
+    }
+    
 
 }

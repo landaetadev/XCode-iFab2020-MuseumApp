@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         funcBtnEntrarBorderDesign()
         funcAnimacion()
+        
         navigationController?.navigationBar.isHidden = true
     }
     

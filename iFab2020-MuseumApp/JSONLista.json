@@ -4,13 +4,34 @@
           "jsonQRCode"      : "NES",
           "jsonWikiURL"     : "https://en.wikipedia.org/wiki/Nintendo_Entertainment_System",
           "jsonImageFile"   : "https://orlanlea.upv.edu.es/trabajofinaliFab/images/nes-am.png",
-          "jsonVideoFile"   : "https://orlanlea.upv.edu.es/trabajofinaliFab/videos/iMacG3.mp4",
+          "jsonVideoFile"   : "https://orlanlea.upv.edu.es/trabajofinaliFab/videos/NES.mp4",
       },
       {
           "jsonID"          : 2,
+          "jsonQRCode"      : "iMacG3",
+          "jsonWikiURL"     : "https://en.wikipedia.org/wiki/IMac_G3",
+          "jsonImageFile"   : "https://orlanlea.upv.edu.es/trabajofinaliFab/images/iMacG3.jpg",
+          "jsonVideoFile"   : "https://orlanlea.upv.edu.es/trabajofinaliFab/videos/iMacG3.mp4",
+      },
+      {
+          "jsonID"          : 3,
           "jsonQRCode"      : "SEGA",
           "jsonWikiURL"     : "https://en.wikipedia.org/wiki/Sega_Genesis",
-          "jsonImageFile"   : "https://orlanlea.upv.edu.es/trabajofinaliFab/images/sega.png",
-          "jsonVideoFile"   : "https://orlanlea.upv.edu.es/trabajofinaliFab/videos/iMacG3.mp4",
+          "jsonImageFile"   : "https://orlanlea.upv.edu.es/trabajofinaliFab/images/SEGA.png",
+          "jsonVideoFile"   : "https://orlanlea.upv.edu.es/trabajofinaliFab/videos/SEGA.mp4",
+      },
+      {
+          "jsonID"          : 4,
+          "jsonQRCode"      : "MS-DOS6.22",
+          "jsonWikiURL"     : "https://en.wikipedia.org/wiki/MS-DOS",
+          "jsonImageFile"   : "https://orlanlea.upv.edu.es/trabajofinaliFab/images/MS-DOS6.22.png",
+          "jsonVideoFile"   : "https://orlanlea.upv.edu.es/trabajofinaliFab/videos/MS-DOS6.22.mp4",
+      },
+      {
+          "jsonID"          : 5,
+          "jsonQRCode"      : "PSP",
+          "jsonWikiURL"     : "https://en.wikipedia.org/wiki/PlayStation_Portable",
+          "jsonImageFile"   : "https://orlanlea.upv.edu.es/trabajofinaliFab/images/PSP.png",
+          "jsonVideoFile"   : "https://orlanlea.upv.edu.es/trabajofinaliFab/videos/PSP.mp4",
       }
 ]

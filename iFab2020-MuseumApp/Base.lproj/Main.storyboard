@@ -85,7 +85,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-442" y="796"/>
+            <point key="canvasLocation" x="183" y="672"/>
         </scene>
         <!--MuseumApp-->
         <scene sceneID="LQN-a1-2Df">
@@ -124,9 +124,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="llB-9a-3w9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="470" y="796"/>
+            <point key="canvasLocation" x="1078" y="672"/>
         </scene>
-        <!--Pantalla1-->
+        <!--Wikipedia-->
         <scene sceneID="3uM-tF-rnP">
             <objects>
                 <viewController id="QyB-g6-UYb" customClass="ScreenWikiViewController" customModule="MuseumApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -166,7 +166,7 @@
                             <constraint firstItem="NVA-KT-Lga" firstAttribute="centerX" secondItem="zuj-r2-6P4" secondAttribute="centerX" id="v6d-1N-kdX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Pantalla1" id="Slm-q8-dKV">
+                    <navigationItem key="navigationItem" title="Wikipedia" id="Slm-q8-dKV">
                         <barButtonItem key="leftBarButtonItem" id="9xm-CQ-jev">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qNk-gt-NXJ" userLabel="Camara">
                                 <rect key="frame" x="16" y="11" width="79.666666666666671" height="22"/>
@@ -187,9 +187,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4AO-Wt-xai" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-911.20000000000005" y="-276.35467980295567"/>
+            <point key="canvasLocation" x="1078" y="1455"/>
         </scene>
-        <!--Pantalla2-->
+        <!--Imagenes-->
         <scene sceneID="RdB-Ob-FcV">
             <objects>
                 <viewController id="nCS-Og-9vh" customClass="ScreenImagesController" customModule="MuseumApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -223,7 +223,7 @@
                             <constraint firstItem="GSr-np-jD7" firstAttribute="centerY" secondItem="zp9-CN-Xbm" secondAttribute="centerY" id="seY-UY-dOZ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Pantalla2" id="BCE-0Q-0Ag">
+                    <navigationItem key="navigationItem" title="Imagenes" id="BCE-0Q-0Ag">
                         <barButtonItem key="leftBarButtonItem" id="98A-qc-n6a">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="S6O-LD-KBh">
                                 <rect key="frame" x="16" y="11" width="79.666666666666671" height="22"/>
@@ -244,7 +244,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VwA-I2-ERY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-44" y="-276"/>
+            <point key="canvasLocation" x="1849" y="1455"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="vrg-oW-QEW">
@@ -264,9 +264,9 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xcp-eK-p2T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-17" y="-1294"/>
+            <point key="canvasLocation" x="1849" y="672"/>
         </scene>
-        <!--Pantalla3-->
+        <!--Videos-->
         <scene sceneID="agk-4k-Lzs">
             <objects>
                 <viewController id="Q16-Mw-C6V" customClass="ScreenVideoViewController" customModule="MuseumApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -301,7 +301,7 @@
                             <constraint firstItem="B6n-3I-kH4" firstAttribute="centerX" secondItem="ivS-zQ-cjs" secondAttribute="centerX" id="rp1-ef-54c"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Pantalla3" id="abx-n2-8Rb">
+                    <navigationItem key="navigationItem" title="Videos" id="abx-n2-8Rb">
                         <barButtonItem key="leftBarButtonItem" id="iK2-Hj-Vgq">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="GS8-eq-8OW">
                                 <rect key="frame" x="16" y="11" width="79.666666666666671" height="22"/>
@@ -322,7 +322,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DEa-YF-er4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="788" y="-276"/>
+            <point key="canvasLocation" x="2676" y="1455"/>
         </scene>
         <!--MuseumApp-->
         <scene sceneID="eRN-9W-MGR">
@@ -348,7 +348,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gXy-b8-132" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-442" y="672"/>
+            <point key="canvasLocation" x="183" y="672"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="sDV-kP-TLG">
@@ -368,7 +368,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tun-cw-qWI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-911" y="-429"/>
+            <point key="canvasLocation" x="1078" y="1455"/>
         </scene>
         <!--Item 2-->
         <scene sceneID="5gD-lg-4rF">
@@ -388,7 +388,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dPn-nW-xeu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-44" y="-429"/>
+            <point key="canvasLocation" x="1849" y="1455"/>
         </scene>
         <!--Item 3-->
         <scene sceneID="KIB-KT-FuE">
@@ -408,7 +408,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n3k-fx-vvf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="788" y="-429"/>
+            <point key="canvasLocation" x="2676" y="1455"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yN0-aX-yEK">
@@ -428,11 +428,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MWT-c0-HVI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="470" y="672"/>
+            <point key="canvasLocation" x="1079" y="672"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pZy-9p-tVP"/>
+        <segue reference="Cmn-ip-OzB"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Image001-25" width="25" height="25"/>

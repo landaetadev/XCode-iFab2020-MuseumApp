@@ -10,11 +10,10 @@ import Foundation
 
 var varCodQRFound :Bool = false
 var varScreenPrint :Bool = false
-var varJSONID = "", varJSONQRCode = "", varJSONWikiURL = "", varJSONImageFile = "", varJSONVideoFile = ""
+var varJSONID = "", varJSONQRCode = "", varJSONTitle = "", varJSONWikiURL = "", varJSONImageFile = "", varJSONVideoFile = ""
 
-//func readLocalJsonFile()
-func readLocalJsonFile(varCodQR:String)
-//func readLocalJsonFile(varCodQR:String) -> String
+
+func funcReadLocalJsonFile(varCodQR:String)
 {
     //RESETEA BOOLEANOS PARA LA PROXIMA BUSQUEDA EN LOCALJSONFILE
     varCodQRFound = false
@@ -36,6 +35,7 @@ func readLocalJsonFile(varCodQR:String)
             guard let letUserDict = user as? [String:Any] else {return}
             guard let jsonID = letUserDict["jsonID"] else {return}
             guard let jsonQRCode = letUserDict["jsonQRCode"] else {return}
+            guard let jsonTitle = letUserDict["jsonTitle"] else {return}
             guard let jsonWikiURL = letUserDict["jsonWikiURL"] else {return}
             guard let jsonImageFile = letUserDict["jsonImageFile"] else {return}
             guard let jsonVideoFile = letUserDict["jsonVideoFile"] else {return}
@@ -47,6 +47,7 @@ func readLocalJsonFile(varCodQR:String)
                     print("QR RECIBIDO: \(varCodQR)")
                     varJSONID = "\(jsonID)"
                     varJSONQRCode = "\(jsonQRCode)"
+                    varJSONTitle = "\(jsonTitle)"
                     varJSONWikiURL = "\(jsonWikiURL)"
                     varJSONImageFile = "\(jsonImageFile)"
                     varJSONVideoFile = "\(jsonVideoFile)"
@@ -73,7 +74,7 @@ func readLocalJsonFile(varCodQR:String)
 func funcSendDataToScreen()
 {
     print("INFORMACION DATOS DESDE LOCALJSONFILE")
-    print("ID: \(varJSONID) \n" + "QRCode: \(varJSONQRCode) \n" +  "WikiURL: \(varJSONWikiURL) \n" + "ImageFile: \(varJSONImageFile) \n" + "VideoFile: \(varJSONVideoFile)")
+    print("ID: \(varJSONID) \n" + "QRCode: \(varJSONQRCode) \n" + "Title: \(varJSONTitle) \n" + "WikiURL: \(varJSONWikiURL) \n" + "ImageFile: \(varJSONImageFile) \n" + "VideoFile: \(varJSONVideoFile)")
 }
 
 

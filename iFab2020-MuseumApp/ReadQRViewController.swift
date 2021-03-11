@@ -89,7 +89,7 @@ class ReadQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
                     print("LA CAMARA FUNCIONA, EL CODIGO DICE: \(letObject.stringValue!)")
                     let letCodeQRDetectado = letObject.stringValue!
                     //PASAR INFORMACION LEIDA EN EL QR A LOCALJSON
-                    readLocalJsonFile(varCodQR: letCodeQRDetectado)
+                    funcReadLocalJsonFile(varCodQR: letCodeQRDetectado)
                     
                     // Activar la pantalla de contenido al encontrar QR => CameraVC -> ContenidoVC
                     if varCodQRFound == true

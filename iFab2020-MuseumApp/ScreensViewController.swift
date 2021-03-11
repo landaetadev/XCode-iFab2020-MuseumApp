@@ -33,7 +33,7 @@ class ScreenWikiViewController: UIViewController
         imgWikipedia480.isHidden = true
         
         //Asigna Texto al titulo del ScreenView
-        navigationItem.title = varJSONQRCode
+        navigationItem.title = varJSONTitle
         
         //Cargar Web Wiki
         if varJSONWikiURL != ""
@@ -64,7 +64,7 @@ class ScreenImagesController: UIViewController
         //print("ImageFile: \(varJSONImageFile)")
         
         //Asigna Texto al titulo del ScreenView
-        navigationItem.title = varJSONQRCode
+        navigationItem.title = varJSONTitle
         
         //Cargar Imagen
         if varJSONImageFile != ""
@@ -95,7 +95,7 @@ class ScreenVideoViewController: UIViewController
         
         
         //Asigna Texto al titulo del ScreenView
-        navigationItem.title = varJSONQRCode
+        navigationItem.title = varJSONTitle
         
         //Cargar Video
         if varJSONWikiURL != ""

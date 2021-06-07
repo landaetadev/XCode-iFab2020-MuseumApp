@@ -85,7 +85,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="241" y="672"/>
+            <point key="canvasLocation" x="182" y="672"/>
         </scene>
         <!--MuseumApp-->
         <scene sceneID="LQN-a1-2Df">
@@ -432,7 +432,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Cmn-ip-OzB"/>
+        <segue reference="pZy-9p-tVP"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Image001-25" width="25" height="25"/>

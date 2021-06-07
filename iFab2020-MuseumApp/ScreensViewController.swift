@@ -56,7 +56,6 @@ class ScreenImagesController: UIViewController
 
     
     @IBOutlet weak var imgImages: UIImageView!
-    
     @IBOutlet weak var imgScreenImageVC: UIImageView!
     
     override func viewDidLoad() {
@@ -86,7 +85,6 @@ class ScreenVideoViewController: UIViewController
 {
     
     @IBOutlet weak var imgMovies: UIImageView!
-    
     @IBOutlet weak var webviewScreenVideoVC: WKWebView!
     
     override func viewDidLoad() {
@@ -108,35 +106,7 @@ class ScreenVideoViewController: UIViewController
             imgMovies.isHidden = false
             webviewScreenVideoVC.isHidden = true
         }
-        
+
     }
-    
-    
-//    func funStartVideo()
-//    {
-        //Cargar Video local WORKS
-//        if let path = Bundle.main.path(forResource: "iMacG3", ofType: "mp4")
-//        {
-//            let video = AVPlayer(url: URL(fileURLWithPath: path))
-//            let videoPlayer = AVPlayerViewController()
-//            videoPlayer.player = video
-//
-//            present(videoPlayer, animated: true, completion:
-//            {
-//                video.play()
-//            })
-//        }
-        
-        //Cargar Video desde la web - NO REPRODUCE EL SONIDO
-//        let letVideoURL = NSURL(string: varJSONVideoFile)! as URL
-//        let letVideo = AVPlayer(url: letVideoURL)
-//        let letVideoplayer = AVPlayerViewController()
-//        letVideoplayer.player = letVideo
-//
-//        present(letVideoplayer, animated: true, completion: {
-//            letVideo.play()
-//        })
-        
-//    }
- 
+
 }

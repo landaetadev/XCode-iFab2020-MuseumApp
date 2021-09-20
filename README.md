@@ -3,7 +3,7 @@
 
 ## Content
 
-Este proyecto fue mi trabajo final para la Especialización en Tecnologías Interactivas en la U.P.V., se trata se una app que se encarga de leer códigos QR’s, con el dato obtenido realiza una búsqueda en un archivo JSON donde se encuentran las direcciones web del contenido a mostrar.
+This project was my final work for the Specialization in Interactive Technologies at the U.P.V., it is an app that is responsible for reading QR codes, with the data obtained it performs a search in a JSON file where the web addresses of the content to be displayed are found .
 
 
 ## Screenshots
@@ -18,16 +18,17 @@ Este proyecto fue mi trabajo final para la Especialización en Tecnologías Inte
 </p>
 
 ## Installation
-Si deseas probar la app, puedes descargar el codigo y probarla desde tu iPhone, se recomienda iOS 13 en adelante.
+If you want to test the app, you can download the code and test it from your iPhone, iOS 13 is recommended onwards.
 
 ## Codigos QR
 
-Con los codigos QR que se encuentran a continuacion podras probar la app.
+The QR codes below allow you to test the application.
 
 <p>
   <img src="./assets/QRs/PSP.png" width="200">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="./assets/QRs/NES.png" width="200"><BR><BR><BR>
-  <img src="./assets/QRs/SEGA.png" width="200">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="./assets/QRs/iMacG3.png" width="200">
+  <img src="./assets/QRs/NES.png" width="200">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="./assets/QRs/SEGA.png" width="200"><BR><BR><BR>
+  <img src="./assets/QRs/iMacG3.png" width="200">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="./assets/QRs/MS-DOS6.22.png" width="200">
 </p>
 

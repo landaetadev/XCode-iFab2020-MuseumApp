@@ -53,7 +53,6 @@ class ScreenWikiViewController: UIViewController
 
 class ScreenImagesController: UIViewController
 {
-
     
     @IBOutlet weak var imgImages: UIImageView!
     @IBOutlet weak var imgScreenImageVC: UIImageView!

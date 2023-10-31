@@ -43,7 +43,6 @@ func funcReadLocalJsonFile(varCodQR:String)
             //COMPARACION DE CODIGO QR CON LISTA JSON
             if varCodQR == jsonQRCode as! String && varCodQRFound == false && varScreenPrint == false
             {
-                
                     print("QR RECIBIDO: \(varCodQR)")
                     varJSONID = "\(jsonID)"
                     varJSONQRCode = "\(jsonQRCode)"
@@ -73,8 +72,13 @@ func funcReadLocalJsonFile(varCodQR:String)
 
 func funcSendDataToScreen()
 {
-    print("INFORMACION DATOS DESDE LOCALJSONFILE")
-    print("ID: \(varJSONID) \n" + "QRCode: \(varJSONQRCode) \n" + "Title: \(varJSONTitle) \n" + "WikiURL: \(varJSONWikiURL) \n" + "ImageFile: \(varJSONImageFile) \n" + "VideoFile: \(varJSONVideoFile)")
+    print("INFORMACION DATOS DESDE LOCALJSONFILE \n" +
+          "ID: \(varJSONID) \n" +
+          "QRCode: \(varJSONQRCode) \n" +
+          "Title: \(varJSONTitle) \n" +
+          "WikiURL: \(varJSONWikiURL) \n" +
+          "ImageFile: \(varJSONImageFile) \n" +
+          "VideoFile: \(varJSONVideoFile)")
 }
 
 

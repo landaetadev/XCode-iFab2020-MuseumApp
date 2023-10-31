@@ -37,26 +37,27 @@ class ReadQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
         //position: .front => camara frontal
         guard
             let letCaptureDevice = AVCaptureDevice.default(.builtInWideAngleCamera, for: AVMediaType.video, position: .back)
-            else
-        {
-                //EN CASO DE QUE NO SE DETECTE CAMARA EN EL DIPOSITIVO
+                
+            else {
+            
+            //EN CASO DE QUE NO SE DETECTE CAMARA EN EL DIPOSITIVO
             print("LA CAMARA NO HA SIDO DETECTADA")
-                let letAlertaCam = UIAlertController(title: "ERROR", message: "No se detecta camara en el dispositivo", preferredStyle: .alert)
-                //Boton en el mensaje
-                letAlertaCam.addAction(UIAlertAction(title: "OK", style: .default, handler: { (nil) in
-                    //Al no detectar camara regresa a la pantalla anterior - Click en OK
-                    self.navigationController?.popViewController(animated: true)
-                    self.dismiss(animated: true, completion: nil)
-                }))
-                //Activar el mensaje
-                self.present(letAlertaCam, animated: true, completion: nil)
-                return
+            let letAlertaCam = UIAlertController(title: "ERROR", message: "No se detecta camara en el dispositivo", preferredStyle: .alert)
+            //Boton en el mensaje
+            letAlertaCam.addAction(UIAlertAction(title: "OK", style: .default, handler: { (nil) in
+                //Al no detectar camara regresa a la pantalla anterior - Click en OK
+                self.navigationController?.popViewController(animated: true)
+                self.dismiss(animated: true, completion: nil)
+            }))
+            //Activar el mensaje
+            self.present(letAlertaCam, animated: true, completion: nil)
+            return
         }
         
-        do{
+        do {
             let letInput = try AVCaptureDeviceInput(device: letCaptureDevice)
             letSession.addInput(letInput)
-        }catch{
+        } catch {
             print ("ERROR - Tu dipositivo no puede dar video")
         }
         

@@ -4,7 +4,7 @@
           "jsonQRCode"      : "NES",
           "jsonTitle"       : "Nintendo NES",
           "jsonWikiURL"     : "https://en.wikipedia.org/wiki/Nintendo_Entertainment_System",
-          "jsonImageFile"   : "https://filedn.eu/lUfpa3BpLa45XCcSIQyWRHF/WWW/FilesProjects/XCodeMuseumApp/images/nes-am.png",
+          "jsonImageFile"   : "https://filedn.eu/lUfpa3BpLa45XCcSIQyWRHF/WWW/FilesProjects/XCodeMuseumApp/images/nes-am.webp",
           "jsonVideoFile"   : "https://filedn.eu/lUfpa3BpLa45XCcSIQyWRHF/WWW/FilesProjects/XCodeMuseumApp/videos/NES.mp4",
       },
       {
@@ -12,7 +12,7 @@
           "jsonQRCode"      : "iMacG3",
           "jsonTitle"       : "iMac G3",
           "jsonWikiURL"     : "https://en.wikipedia.org/wiki/IMac_G3",
-          "jsonImageFile"   : "https://filedn.eu/lUfpa3BpLa45XCcSIQyWRHF/WWW/FilesProjects/XCodeMuseumApp/images/iMacG3.jpg",
+          "jsonImageFile"   : "https://filedn.eu/lUfpa3BpLa45XCcSIQyWRHF/WWW/FilesProjects/XCodeMuseumApp/images/iMacG3.webp",
           "jsonVideoFile"   : "https://filedn.eu/lUfpa3BpLa45XCcSIQyWRHF/WWW/FilesProjects/XCodeMuseumApp/videos/iMacG3.mp4",
       },
       {
@@ -20,7 +20,7 @@
           "jsonQRCode"      : "SEGA",
           "jsonTitle"       : "SEGA",
           "jsonWikiURL"     : "https://en.wikipedia.org/wiki/Sega_Genesis",
-          "jsonImageFile"   : "https://filedn.eu/lUfpa3BpLa45XCcSIQyWRHF/WWW/FilesProjects/XCodeMuseumApp/images/SEGA.png",
+          "jsonImageFile"   : "https://filedn.eu/lUfpa3BpLa45XCcSIQyWRHF/WWW/FilesProjects/XCodeMuseumApp/images/SEGA.webp",
           "jsonVideoFile"   : "https://filedn.eu/lUfpa3BpLa45XCcSIQyWRHF/WWW/FilesProjects/XCodeMuseumApp/videos/SEGA.mp4",
       },
       
@@ -30,7 +30,7 @@
           "jsonQRCode"      : "MS-DOS6.22",
           "jsonTitle"       : "MS-DOS 6.22",
           "jsonWikiURL"     : "https://en.wikipedia.org/wiki/MS-DOS",
-          "jsonImageFile"   : "https://filedn.eu/lUfpa3BpLa45XCcSIQyWRHF/WWW/FilesProjects/XCodeMuseumApp/images/MS-DOS6.22.png",
+          "jsonImageFile"   : "https://filedn.eu/lUfpa3BpLa45XCcSIQyWRHF/WWW/FilesProjects/XCodeMuseumApp/images/MS-DOS6.22.webp",
           "jsonVideoFile"   : "https://filedn.eu/lUfpa3BpLa45XCcSIQyWRHF/WWW/FilesProjects/XCodeMuseumApp/videos/MS-DOS6.22.mp4",
       },
       {
@@ -38,7 +38,7 @@
           "jsonQRCode"      : "PSP",
           "jsonTitle"       : "PSP",
           "jsonWikiURL"     : "https://en.wikipedia.org/wiki/PlayStation_Portable",
-          "jsonImageFile"   : "https://filedn.eu/lUfpa3BpLa45XCcSIQyWRHF/WWW/FilesProjects/XCodeMuseumApp/images/PSP.png",
+          "jsonImageFile"   : "https://filedn.eu/lUfpa3BpLa45XCcSIQyWRHF/WWW/FilesProjects/XCodeMuseumApp/images/PSP.webp",
           "jsonVideoFile"   : "https://filedn.eu/lUfpa3BpLa45XCcSIQyWRHF/WWW/FilesProjects/XCodeMuseumApp/videos/PSP.mp4",
       }
 ]
